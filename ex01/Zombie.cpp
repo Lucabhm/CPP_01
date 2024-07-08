@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 15:56:02 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/08 11:00:09 by lbohm            ###   ########.fr       */
+/*   Created: 2024/07/08 11:59:11 by lbohm             #+#    #+#             */
+/*   Updated: 2024/07/08 13:22:19 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void	Zombie::randomChump(std::string name)
+Zombie::~Zombie()
 {
-	this->name = name;
+	std::cout << "Zombie " << name << " is dead" << std::endl;
+}
+
+void	Zombie::announce(void)
+{
+	std::cout << name << ": " << "BraiiiiiiinnnzzzZ..." << std::endl;
 }

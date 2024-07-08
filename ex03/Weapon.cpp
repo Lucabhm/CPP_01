@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 15:56:02 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/08 11:00:09 by lbohm            ###   ########.fr       */
+/*   Created: 2024/07/08 15:18:23 by lbohm             #+#    #+#             */
+/*   Updated: 2024/07/08 15:51:43 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-void	Zombie::randomChump(std::string name)
+const std::string	&Weapon::get_Type(void){return (type);}
+
+void	Weapon::setType(std::string type)
 {
-	this->name = name;
+	this->type = type;
 }

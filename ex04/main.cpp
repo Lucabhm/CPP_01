@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 15:56:02 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/08 11:00:09 by lbohm            ###   ########.fr       */
+/*   Created: 2024/07/08 17:02:31 by lbohm             #+#    #+#             */
+/*   Updated: 2024/07/08 17:13:53 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Replace.hpp"
 
-void	Zombie::randomChump(std::string name)
+int	main(int argc, char **argv)
 {
-	this->name = name;
+	Replace	input;
 }

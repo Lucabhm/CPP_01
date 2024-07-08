@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 15:56:02 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/08 11:00:09 by lbohm            ###   ########.fr       */
+/*   Created: 2024/07/08 11:59:38 by lbohm             #+#    #+#             */
+/*   Updated: 2024/07/08 13:21:17 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-void	Zombie::randomChump(std::string name)
+# include <iostream>
+# include <string>
+
+class Zombie
 {
-	this->name = name;
-}
+	private:
+		std::string	name;
+	public:
+		~Zombie();
+		Zombie*	zombieHorde( int N, std::string name );
+		void	announce( void );
+};
+
+#endif

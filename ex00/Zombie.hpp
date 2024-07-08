@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:56:08 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/05 16:39:53 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/07/08 14:39:03 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class Zombie
 	private:
 		std::string	name;
 	public:
+		Zombie();
+		Zombie(std::string name);
 		~Zombie();
 
 		void	announce( void );

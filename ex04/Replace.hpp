@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 15:56:02 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/08 11:00:09 by lbohm            ###   ########.fr       */
+/*   Created: 2024/07/08 17:06:58 by lbohm             #+#    #+#             */
+/*   Updated: 2024/07/08 17:10:37 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef REPLACE_HPP
+# define REPLACE_HPP
 
-void	Zombie::randomChump(std::string name)
+#include <iostream>
+#include <string>
+
+class	Replace
 {
-	this->name = name;
-}
+	private:
+		std::string	s1;
+		std::string	s2;
+		std::string	file;
+	public:
+		Replace(std::string s1, std::string s2, std::string file);
+};
+
+#endif
