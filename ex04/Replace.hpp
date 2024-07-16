@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkauker <jkauker@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 17:06:58 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/09 08:37:08 by jkauker          ###   ########.fr       */
+/*   Updated: 2024/07/16 14:51:48 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,15 @@
 class	Replace
 {
 	private:
-		std::string	file;
-		std::string	s1;
-		std::string	s2;
+		std::string		file;
+		std::string		s1;
+		std::string		s2;
 	public:
-		Replace(std::string file, std::string s1, std::string s2);
+		Replace(int argc, char **argv);
+		~Replace();
 		std::string	get_file(void);
 		std::string	get_s1(void);
+		std::string	get_s2(void);
 };
 
 #endif

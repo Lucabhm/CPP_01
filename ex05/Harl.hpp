@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 15:55:56 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/16 11:10:24 by lbohm            ###   ########.fr       */
+/*   Created: 2024/07/16 15:32:40 by lbohm             #+#    #+#             */
+/*   Updated: 2024/07/16 16:36:23 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int	main(void)
+# include <iostream>
+# include <string>
+
+class	Harl
 {
-	Zombie	*first;
-	Zombie	second;
+	private:
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
+	public:
+		void	complain( std::string level );
+};
 
-	first = second.newZombie("Luca");
-	second.randomChump("Tom");
-	first->announce();
-	second.announce();
-	delete first;
-	return (0);
-}
+#endif

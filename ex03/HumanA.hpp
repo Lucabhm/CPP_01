@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:18:36 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/08 16:54:06 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/07/16 13:10:14 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ class HumanA
 {
 	private:
 		std::string	name;
+		Weapon	&weapon;
 	public:
 		HumanA(std::string newName, Weapon &type);
-		~HumanA(){};
+		~HumanA();
 		void	attack(void);
-		Weapon	*weapon;
 };
 
 #endif

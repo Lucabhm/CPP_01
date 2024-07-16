@@ -3,22 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   Replace.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkauker <jkauker@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 17:10:53 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/09 08:37:28 by jkauker          ###   ########.fr       */
+/*   Updated: 2024/07/16 15:20:54 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Replace.hpp"
 
-Replace::Replace(std::string file, std::string s1, std::string s2)
+Replace::Replace(int argc, char **argv)
 {
-	this->file = file;
-	this->s1 = s1;
-	this->s2 = s2;
+	if (argc == 4)
+	{
+		file = argv[1];
+		s1 = argv[2];
+		s2 = argv[3];
+	}
+	else
+	{
+		std::cerr << "Wrong nbr of Args" << std::endl;
+		std::exit(1);
+	}
 }
+
+Replace::~Replace(){}
 
 std::string	Replace::get_file(void){return (file);}
 
 std::string	Replace::get_s1(void){return (s1);}
+
+std::string	Replace::get_s2(void){return (s2);}
