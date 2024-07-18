@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 11:59:14 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/16 12:26:41 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/07/18 11:52:14 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 int	main(void)
 {
 	Zombie	*zombie;
-	Zombie	*zombie2;
 
-	zombie2 = zombie->zombieHorde(5, "Tom");
+	zombie = Zombie::zombieHorde(5, "Tom");
 	for (int i = 0; i < 5; i++)
-		zombie2[i].announce();
-	delete[]	zombie2;
+		zombie[i].announce();
+	delete[]	zombie;
 	return (0);
 }

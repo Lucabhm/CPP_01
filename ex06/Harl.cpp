@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 17:10:47 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/16 17:29:54 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/07/18 10:50:16 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,6 @@ void	Harl::complain(std::string level)
 		if (!value[i].compare(level))
 			break ;
 	}
-	if (i == 4)
-	{
-		std::cerr << "[ Probably complaining about insignificant problems ]" << std::endl;
-		std::exit(1);
-	}
 	switch(i)
 	{
 		case(0):
@@ -68,5 +63,8 @@ void	Harl::complain(std::string level)
 		case(3):
 			std::cout << "[ERROR]" << std::endl;
 			(person.*test[3])();
+		default:
+			std::cerr << "[ Probably complaining about insignificant problems ]" << std::endl;
+			std::exit(1);
 	}
 }
