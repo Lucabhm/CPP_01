@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 17:02:31 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/16 15:22:24 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/07/22 09:33:24 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,7 @@ int	main(int argc, char **argv)
 		{
 			pos = line.find(input.get_s1());
 			if (pos != std::string::npos)
-			{
-				line.erase(pos, input.get_s1().length());
-				line.insert(pos, input.get_s2());
-			}
+				line.replace(pos, input.get_s1().length(), input.get_s2());
 			out << line << std::endl;
 		}
 	}
