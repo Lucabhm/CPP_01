@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 11:59:14 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/22 09:09:57 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/07/23 09:43:00 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int	main(void)
 	zombie = zombie->zombieHorde(5, "Tom");
 	for (int i = 0; i < 5; i++)
 		zombie[i].announce();
-	delete[]	zombie;
+	delete[] zombie;
 	return (0);
 }

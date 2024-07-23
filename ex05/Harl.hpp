@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:32:40 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/16 16:36:23 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/07/23 10:01:07 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <map>
 
 class	Harl
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:32:47 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/22 09:50:49 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/07/23 12:25:13 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,20 +43,20 @@ void	Harl::error(void)
 
 void	Harl::complain(std::string level)
 {
-	void (Harl::*test[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	std::string	value[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	Harl	person;
-	int		i;
+	typedef void (Harl::*test)(void);
+	std::map<std::string, test>				map;
+	std::map<std::string, test>::iterator	i;
 
-	for (i = 0; i < 4; i++)
-	{
-		if (!value[i].compare(level))
-			break ;
-	}
-	if (i == 4)
+	map["DEBUG"] = &Harl::debug;
+	map["INFO"] = &Harl::info;
+	map["WARNING"] = &Harl::warning;
+	map["ERROR"] = &Harl::error;
+	i = map.find(level);
+	if (i != map.end())
+		(this->*(i->second))();
+	else
 	{
 		std::cerr << "[ Probably complaining about insignificant problems ]" << std::endl;
 		std::exit(1);
 	}
-	(person.*test[i])();
 }
