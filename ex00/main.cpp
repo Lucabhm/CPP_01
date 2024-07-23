@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:55:56 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/22 11:00:49 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/07/23 10:54:48 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 int	main(void)
 {
 	Zombie	*first;
-	Zombie	second;
 
-	first = first->newZombie("Luca");
-	second.randomChump("Tom");
+	first = newZombie("Luca");
+	randomChump("Tom");
 	first->announce();
-	second.announce();
 	delete first;
 	return (0);
 }

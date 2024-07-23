@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:56:08 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/22 10:54:26 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/07/23 10:53:55 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ class Zombie
 		~Zombie();
 
 		void	announce( void );
-		Zombie*	newZombie( std::string newname );
-		void	randomChump( std::string newname );
 };
+
+Zombie*	newZombie( std::string newname );
+void	randomChump( std::string newname );
 
 #endif

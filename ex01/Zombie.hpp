@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 11:59:38 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/22 10:59:28 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/07/23 11:16:17 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ class Zombie
 	public:
 		Zombie();
 		~Zombie();
-		Zombie*	zombieHorde( int N, std::string name );
-		void	announce( void );
+		void	setName(std::string newname);
+		void	announce(void);
 };
+
+Zombie*	zombieHorde( int N, std::string name );
 
 #endif
